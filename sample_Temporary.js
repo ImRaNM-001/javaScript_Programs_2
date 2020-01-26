@@ -1,3 +1,4 @@
+// part1 while loop example
 let cond=true, k=3;
 while(cond){
     if(k<=4){
@@ -6,3 +7,5 @@ while(cond){
     console.log(k);
     k++;
 }
+
+// part2 
