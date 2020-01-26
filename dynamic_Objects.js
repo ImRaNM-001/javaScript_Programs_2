@@ -3,7 +3,7 @@ const circle ={
 	radius: 10,
 	color: 'red',
 	log(){
-		console.log('Log', this.radius);			//test
+		console.log('Log', this.radius);			
 	}
 }
 console.log(circle);						// prints { radius: 10, color: 'red', log: [Function: log] }
