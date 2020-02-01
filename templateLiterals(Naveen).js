@@ -16,7 +16,7 @@ template literals (introduced in ES6) --> ` ` (back ticks) */
 // writing template literals below, Ex: 1
 const emailBody = `Hi Walter,
 
-I need your help to resolve my 'gitgub' hard
+I need your help to resolve my 'github' hard
 reset problem, hence if you could..........
 
 look "into my case!!"!

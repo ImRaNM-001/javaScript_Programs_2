@@ -13,8 +13,7 @@ while(cond){
 // console.log(window);
 // console.log(self);
 // console.log(frame);
-console.log(globalThis);       // prints undefined
-
+// console.log(globalThis);       // prints undefined
 
 
 
