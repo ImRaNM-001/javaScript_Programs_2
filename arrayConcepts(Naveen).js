@@ -107,7 +107,7 @@ const c2 = courses.findIndex(function(element){
     return element.topicName === 'front-end automation';
     }
 );
-
+ 
 console.log(c2);                // prints 0 as 'front-end automation' is at 0th index
 
 
