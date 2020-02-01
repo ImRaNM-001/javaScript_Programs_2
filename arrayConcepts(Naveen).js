@@ -6,7 +6,7 @@ console.log(num);                   // prints [3, 4]
 console.log('<----------->\n');
 
 //add element at end of array
-num.push(5,6);              
+num.push(5, 6);              
 console.log(num);               // prints [3, 4, 5, 6]
 
 console.log('<----------->\n');
@@ -18,8 +18,8 @@ console.log(num);               // prints [1, 2, 3, 4, 5, 6]
 console.log('<----------->\n');
 
 //add element at middle of array
-num.splice(3, 0, 'a', 'b');             // 3 is element position after which it will add new elements and 0 is delete count
-console.log(num);                       // prints [    1,   2, 3, 'a', 'b', 4, 5, 6]
+num.splice(3, 0, 'a', 'b');             // we are telling in 3rd index/position, don't remove any element and add 2 elements a & b.
+console.log(num);                       // prints [ 1, 2, 3, 'a', 'b', 4, 5, 6]
 
 console.log('<----------->\n');
 
@@ -34,7 +34,7 @@ for (const index of num) console.log(index);                // same output as ab
 console.log('<----------->\n'); 
 
 //Or,
-num.forEach((element) => console.log(element) );        // not required to define element variable
+num.forEach(element => console.log(element) );        // not required to define element variable
 
 console.log('<----------->\n');     
 
@@ -49,7 +49,7 @@ console.log(arr1.indexOf('john') );              // prints 1 as john is located 
 console.log(arr1.indexOf(76, 1) );               // prints 4 as 76 is in 4th position {it says look for 76 and start from 1st position]
 console.log(arr1.indexOf(886, 1) );               // prints -1 as 886 is not available, checks from 1st position onwards
 
-console.log(arr1.indexOf(887, arr1.indexOf(0) + 1) );       // prints -1 as it looks 887 from 1st position
+console.log(arr1.indexOf(887, arr1.indexOf(0) + 1) );       // prints -1 as it looks 887 from 0th position
 
 // /returning true or false:
 console.log(arr1.indexOf('john') !== 3) ;       // prints true as 1 is not equal to 3
@@ -60,57 +60,53 @@ console.log('<----------->\n');
 console.log(arr1.includes('john') );            // prints true...........new way 
 
 
-console.log('<----------->\n'); 
+console.log('<----------->\n');  
 
 
 // find elements in array (only reference values):
 const courses = [
     {topicNo: 1, topicName: 'front-end automation'}, 
-    {topicNo:2, topicName: 'api automation'}
+    {topicNo: 2, topicName: 'api automation'}
 ];
 
 console.log(courses.includes({topicNo: 1, topicName: 'front-end automation'})   );          // passing 1st object, prints false (this is wrong approach)
 
 console.log('<----------->\n'); 
 
-console.log(courses.find( (element) => {                                    // [Stylish Way]: writing a function using find function amd prints true
-    return element.topicName === 'front-end automation';                    // prints { topicNo: 1, topicName: 'front-end automation' }
-    })
-);
-
-console.log('<----------->\n'); 
-
-console.log(courses.find( (element) => {                    // prints undefined as swades is not there in the course array
-    return element.topicName === 'swades';
-    }
-  )
-);
-
-console.log('<----------->\n'); 
-
-//Or, (another/old way of writing using function way)
+// using finc method and storing in a variable c1 (ES5/old way):
 const c1 = courses.find(function(element){
-    return element.topicNo === 2;
-    }
-);
-console.log(c1);
-
-console.log('<----------->\n'); 
-
-console.log(c1.topicName);              // prints topicname of 2nd object
-console.log(c1.topicNo);                // prints topicno of 2nd object
-
-console.log('<----------->\n'); 
-
-// find index in an array (only reference values):
-const c2 = courses.findIndex(function(element){
     return element.topicName === 'front-end automation';
     }
 );
+console.log(c1);                  // prints { topicNo: 1, topicName: 'front-end automation' } as we have used correct approach by using find method here
+
+console.log('<----------->\n'); 
+
+//Or,  Stylish Way/ New way/ES6 way of writing fat arrow/lambda function and without storing in a variable
+console.log(courses.find(element => element.topicName === 'front-end automation') );       // prints { topicNo: 1, topicName: 'front-end automation' } 
+
+ console.log('<----------->\n'); 
+
+console.log(courses.find(element => element.topicName === 'swades') );               // prints undefined as swades is not there in the course array
+    
+console.log('<----------->\n'); 
+
+// again, for object 2
+const c2 = courses.find(element => element.topicNo === 2) ;
+console.log(c2);                                // prints { topicNo: 2, topicName: 'api automation' }
+
+console.log('<----------->\n'); 
+
+console.log(c2.topicName);              // prints topicname of 2nd object i.e, api automation
+console.log(c2.topicNo);                // prints topicno of 2nd object i.e, 2
+
+console.log('<----------->\n'); 
+
+// find index in an array (only reference values), have used fat arrow function:
+const c3 = courses.findIndex(element => element.topicName === 'front-end automation'); 
+console.log(c3);                                       // prints 0 as 'front-end automation' is at 0th index
+
  
-console.log(c2);                // prints 0 as 'front-end automation' is at 0th index
-
-
 
 
 
