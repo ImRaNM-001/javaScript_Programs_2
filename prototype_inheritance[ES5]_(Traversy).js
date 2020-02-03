@@ -10,12 +10,12 @@ Book.prototype.getSummary = function () {                            // we must 
 
 // creating Magazine constructor
 function Magazine(title, author, year, month){
-    Book.call(this, title, author, year);             // using call method to call Book object parameters and this refers to Magazine instance (constructor)
+    Book.call(this, title, author, year);         // [ES5 syntax]: using call method to call Book object parameters and this refers to Magazine instance (constructor)
     this.month = month;
 }
 
 // call getSummary from mag1 object, which is possible by inheriting prototype method of Book
-Magazine.prototype = Object.create(Book.prototype);         // must be written before instantiating mag1 otherwise TypeError: mag1.getSummary is not a function will come
+Magazine.prototype = Object.create(Book.prototype);       // [ES5 syntax]: must be written before instantiating mag1 otherwise TypeError: mag1.getSummary is not a function will come
 
 // instantiate Magazine object and print it
 const mag1 = new Magazine('Mag One', 'Hillary', 2017, 'Feb');

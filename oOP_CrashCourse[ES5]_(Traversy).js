@@ -59,10 +59,10 @@ Book.prototype.getAge = function () {
 
 console.log(book4.getAge());                               // prints Book 4 is 2 years old
 
-// manipulating data using revise
+// manipulating data using revise function
 Book.prototype.revise = function (updatedYear) {
     this.year = updatedYear;
-    this.revising = true;
+    this.revising = true;                                   // revising variable no need to declare
 }
 
 book4.revise(2019); 

@@ -16,7 +16,7 @@ circle.draw() ;				// prints Draw
 
 
 
-//part 2: writing inside a function (long code)
+// part 2: writing inside a function (long code)
 /*function createCircle(radius){
 	const circle1 = {
 		radius: radius,
