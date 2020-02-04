@@ -11,7 +11,7 @@ console.log(this);               // prints {} in VsCode Output
 
 console.log(globalThis);       // prints Object [global] {    global: [Circular],    clearInterval: [Function: clearInterval],    clearTimeout: Function: clearTimeout],    setInterval: [Function: setInterval],    setTimeout: [Function: setTimeout] { [Symbol(util.promisify.custom)]: [Function] },    queueMicrotask: [Function: queueMicrotask],    clearImmediate: [Function: clearImmediate],    setImmediate: [Function: setImmediate] {      [Symbol(util.promisify.custom)]: [Function]    }  }
 
-alert(1);                    // prints ReferenceError: alert is not defined
+// alert(1);                    // prints ReferenceError: alert is not defined
 
 
 
