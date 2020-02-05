@@ -69,3 +69,4 @@ console.log(mag1.getSummary() );        // prints Mag One was written by Jane Ma
 
 
 
+

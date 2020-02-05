@@ -5,6 +5,11 @@ console.log(num);                   // prints [3, 4]
 
 console.log('<----------->\n');
 
+const arr = [9, 'jai', ['r', 09] ];         // defining array inside an array (nested array)
+console.log(arr[2] [1] );               // prints 9
+
+console.log('<----------->\n');
+
 //add element at end of array
 num.push(5, 6);              
 console.log(num);               // prints [3, 4, 5, 6]

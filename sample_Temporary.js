@@ -8,6 +8,13 @@ while(cond){
     k++;
 } */
 
+let a = new Array();
+a.push(3, 'dilabr' );
+console.log(a);             // prints [ 3, 'dilabr' ]
+
+a.push(new Array (44, 'saajn' ) );
+console.log(a);             // prints [ 3, 'dilabr', [ 44, 'saajn' ] ]
+
 
 
 
