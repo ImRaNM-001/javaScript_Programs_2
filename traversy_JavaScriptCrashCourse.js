@@ -133,7 +133,7 @@ const addNums1 = num1 => num1+90;            // paranthesis must be used if defa
 console.log(addNums1 (5) );                   // prints 95
 
 
-// constructor function with prototype keyword
+// constructor function with prototype keyword [ES5 way]
 function Person(fName, lName, dOB){
     this.fName = fName;
     this.lName = lName;
@@ -158,10 +158,31 @@ const per2 = new Person('Jill', 'Bawer', '8-07-1987');
 
 console.log(per2.dOB);                  // prints 1987-08-06T18:30:00.000Z
 
-console.log(per1.getBirthYear() );              
+console.log(per1.getBirthYear() );             // prints 1985 
 console.log(per2.getFullName() );           // prints Jill Bawer
 
 
+// classes [ES6 way]
+class Person1{
+    constructor(fName, lName, dOB){
+        this.fName = fName;
+        this.lName = lName;
+        this.dOB = new Date(dOB)
+    }
+
+    getBirthYear(){
+        return this.dOB.getFullYear();
+    }
+
+    getFullName(){
+        return `${this.fName} ${this.lName}`;
+    }
+}
+    const per3 = new Person1('Billy', 'Jacob', '5-7-1979');
+    const per4 = new Person1('Mary', 'Jacob', '12-4-1991');  
+
+    console.log(per3.getBirthYear() );                  // prits 1979
+    console.log(per4.getFullName() );                   // prints Mary Jacob
 
 
 
