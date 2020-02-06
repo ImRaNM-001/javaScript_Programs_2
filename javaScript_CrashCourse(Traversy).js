@@ -121,7 +121,7 @@ console.log(color);                          // prints red
 // const addNums = (num1 = 1, num2 = 13) => console.log(num1 + num2) ;         // Lessons Learnt when using fat arrow function, always store in a variable preferrably using const keyword, also don't use console.log in function instead return it without using return keyword
 
 
-// const addNums = (num1 = 1, num2 = 13) => { return (num1 + num2) };          // if return is used, { } are must so that return color is red, avoid return keyword
+// const addNums = (num1 = 1, num2 = 13) => { return (num1 + num2) };          // if return is used, { } are must so that return color is red, avoid return keyword in => functions
 
 const addNums = (num1 = 1, num2 = 13) => num1 + num2;   
 console.log(addNums() );            // prints 14 but if arguments are given inside the function then
@@ -133,14 +133,15 @@ const addNums1 = num1 => num1+90;            // paranthesis must be used if defa
 console.log(addNums1 (5) );                   // prints 95
 
 
-// constructor function with prototype keyword [ES5 way]
+// constructor function with prototype keyword [ES5 things]
 function Person(fName, lName, dOB){
     this.fName = fName;
     this.lName = lName;
     this.dOB = new Date(dOB);
 }
 
-// Person.prototype.getBirthYear = () => this.dOB.getFullYear();        // as oppose to Brad Traversy i pushed myself and wrote 1 liner fat arrow function
+// Person.prototype.getBirthYear = () => this.dOB.getFullYear();        
+// Note: as oppose to Brad Traversy i pushed myself and tried to execute 1 liner fat arrow function with prototype but learned later 'by definition, arrow functions don't have prototypes'.They're designed to be lightweight, without some of the baggage that old-style functions have. Use of prototype property. Arrow functions do not have a prototype property.
 
 // Person.prototype.getFullName = () => `${this.fName} ${this.lName}`;
 
@@ -162,7 +163,7 @@ console.log(per1.getBirthYear() );             // prints 1985
 console.log(per2.getFullName() );           // prints Jill Bawer
 
 
-// classes [ES6 way]
+// classes [ES6 things]
 class Person1{
     constructor(fName, lName, dOB){
         this.fName = fName;
