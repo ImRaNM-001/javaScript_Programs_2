@@ -129,7 +129,7 @@ console.log(addNums() );            // prints 14 but if arguments are given insi
 console.log(addNums(5, 44) );       // prints 49 by ignoring the default parameters
 
 // if 1 parameter is there no need of paranthesis
-const addNums1 = num1 => num1+90;            // paranthesis must be used if default parameters are assigned
+const addNums1 = num1 => num1+90;            // paranthesis must be used if default parameters are assigned. In other words, single parameter do not need paranthesis.
 console.log(addNums1 (5) );                   // prints 95
 
 
