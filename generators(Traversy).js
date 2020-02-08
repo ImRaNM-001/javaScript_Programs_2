@@ -1,5 +1,5 @@
 // Generators are nothing but functions which can be paused and resumed as many times user wants.
-function *gen(){                                    // generator function must be started with *
+function *gen(){                                    // generator function must be preceded with *
     console.log('1st statement');
     yield 'Yield st1';                        
     console.log('2nd statement');
