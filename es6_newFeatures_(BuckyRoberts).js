@@ -80,7 +80,7 @@ function* getUserID(){
     }
 }
 
-let usrID = getUserID();
+const usrID = getUserID();
 console.log(usrID.next().value);            // prints 1 (1st id)
 console.log(usrID.next().value);            // prints 2 (2nd id)
 console.log(usrID.next().value);            // prints 3 (3rd id)
