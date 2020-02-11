@@ -40,7 +40,7 @@ function createCircle(radius){					// this is a factory function whose job is to
 
 const circle1 = createCircle(11);
 console.log(circle1.radius);		//prints 11
-circle1.draw();						// prints Draw Circle 11
+circle1.draw();						// prints Draw a Circle 11
 console.log(circle1);		//prints entire cricle1 object { radius: 11, draw: [Function: draw] }
 
 
