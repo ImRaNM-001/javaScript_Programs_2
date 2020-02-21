@@ -15,7 +15,9 @@ console.log(a);             // prints [ 3, 'dilabr' ]
 a.push(new Array (44, 'saajn' ) );
 console.log(a);             // prints [ 3, 'dilabr', [ 44, 'saajn' ] ]
 
-
+const a1 = [1,2,3];
+const b1 = a1;
+console.log(b1);
 
 
 
