@@ -28,7 +28,7 @@ console.log(emailBody);
 
 // Ex: 2
 const nameW = 'Walter';
-const product = function(){                     // note: we MUST declare function before calling it below with $ 
+const product = () => {                     // note: we MUST declare function before calling it below with $ 
     return 'Baadshah moveie srk';
 }
 

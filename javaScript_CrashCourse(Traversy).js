@@ -4,18 +4,18 @@ console.warn('Tujhse shaadi karogi');        // prints Tujhse shaadi karogi.....
 // String methods
 const s = 'Hello!!'
 console.log(s.length);         // prints 7
-console.log(s.toUpperCase());      // prints HELLO!!
+console.log(s.toUpperCase() );      // prints HELLO!!
 
-console.log(s.substring(0, 3));        // starting index 0 of string and ending at index 3....prints Hel
+console.log(s.substring(0, 3) );        // starting index 0 of string and ending at index 3....prints Hel
 console.log(s.substring(0, 3).toLowerCase());          // prints hel
 
 const s1 = 'captain, marvel, 2, release on, year2022';
-console.log(s1.split(', '));                    // prints [ 'captain', 'marvel', '2', 'release on', 'year2022' ]..NOTE: , is important to split into arrays
+console.log(s1.split(', ') );                    // prints [ 'captain', 'marvel', '2', 'release on', 'year2022' ]..NOTE: , is important to split into arrays
 
 // Array methods
 const fruits = ['oranges', 'pineapple', 'melon', 'dates'];
-console.log(Array.isArray(fruits));            // prints true
-console.log(fruits.indexOf('dates'));      // prints 3 as dates is at 3rd index
+console.log(Array.isArray(fruits) );            // prints true
+console.log(fruits.indexOf('dates') );      // prints 3 as dates is at 3rd index
 
 // Object Literals (which are basically key value pairs)
 const person = {
@@ -84,32 +84,28 @@ for (let index of todos) console.log(index.text);       // prints read emails wr
 for (let index of todos) console.log(index.id);         // prints 1 2 3
 
 // High Order Array functions - forEach, map, filter
-todos.forEach( (index) => console.log(index.text) );          // prints read emails write code attend calls
+todos.forEach(index => console.log(index.text) );          // prints read emails write code attend calls
 
 // map
-const todosText = todos.map((index) => {
+const todosText = todos.map(index => {
     return index.text;
-}
-);
+} );
 console.log(todosText);                 // prints [ 'read emails', 'write code', 'attend calls' ]
 
 
 // filter
-const todosCompl = todos.filter( (index) => {
+const todosCompl = todos.filter(index => {
     return index.isCompleted === true;
-}
-);
+} );
 console.log(todosCompl);                 // prints [ { id: 3, text: 'attend calls', isCompleted: true } ]
 
 
 // use map & filter together
-const todosCompl1 = todos.filter((index) => {
+const todosCompl1 = todos.filter(index => {
     return index.isCompleted === true;
-}
-).map((index) => {
-    return index.text;
-}
-);
+    } ).map(index => {
+        return index.text;
+} );
 console.log(todosCompl1);               // prints [ 'attend calls' ]
 
 // ternary operator
@@ -145,11 +141,12 @@ function Person(fName, lName, dOB){
 
 // Person.prototype.getFullName = () => `${this.fName} ${this.lName}`;
 
-Person.prototype.getBirthYear = function(){
+// Person.prototype.getBirthYear = function(){
+    Person.prototype.getBirthYear = () => {
     return this.dOB.getFullYear();
 }
 
-Person.prototype.getFullName = function(){
+Person.prototype.getFullName = () => {
     return `${this.fName} ${this.lName}`;
 }
 

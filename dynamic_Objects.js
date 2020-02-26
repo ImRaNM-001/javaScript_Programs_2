@@ -11,7 +11,7 @@ console.log(circle);						// prints { radius: 10, color: 'red', log: [Function: 
 circle.shape = 'round';					// adding new property shape
 console.log(circle);						// prints { radius: 10, color: 'red', log: [Function: log], shape: 'round' }
 
-circle.draw = function(){				// adding empty property draw function()
+circle.draw = () => {				// adding empty property draw function()
 }
 console.log(circle);				// prints { radius: 10, color: 'red', log: [Function: log], shape: 'round' ,   draw: [Function] }
 

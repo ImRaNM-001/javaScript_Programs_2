@@ -4,7 +4,7 @@ function Book(title, author, year) {
     this.year = year;
 }
 
-Book.prototype.getSummary = function () {                            // we must write a function outside constructor using prototype keyword
+Book.prototype.getSummary =  () => {                     // we must write a function outside constructor using prototype keyword (deliberately wrote fat arrow fn which is ES6 but prototype is ES5)
     return `${this.title} was written by ${this.author} in ${this.year}`;
 }
 

@@ -1,5 +1,6 @@
 //******Tutorial-1 - Let*********//
 let movie = 'inception';
+
 function theMovie(){
     return movie;
 }
@@ -28,7 +29,8 @@ function testFunction(){
     }
     console.log('\n After if stmt: ', saying);              // prints After if stmt:  Briyani is good
 }
-testFunction();
+
+testFunction();                     // calling fn testFunction()
 
 console.log('\n<------line gap------>\n');  
 

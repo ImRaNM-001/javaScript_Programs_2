@@ -6,9 +6,10 @@ const circle = {
 		a: 1,
 		b: 2
 	},
-	draw: function(){
-		console.log('Draw');
-	}
+	// draw: () => {
+		draw(){
+			console.log('Draw');
+		}
 }
 
 console.log(circle);		// prints {  radius: 1,  isVisible: true,  location: { a: 1, b: 2 },  draw: [Function: draw] }
@@ -56,7 +57,7 @@ factoryFunction follows camelCase, can start with small letters where Constructo
 function CreateCircle2(radius){
 	this.radius = radius;
 
-	this.draw = function(){
+	this.draw = () => {
 		console.log('Draw', radius);
 	}
 }
