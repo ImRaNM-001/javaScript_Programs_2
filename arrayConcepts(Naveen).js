@@ -79,10 +79,9 @@ console.log(courses.includes({topicNo: 1, topicName: 'front-end automation'})   
 console.log('<----------->\n'); 
 
 // using finc method and storing in a variable c1 (ES5/old way):
-const c1 = courses.find(function(element){
+const c1 = courses.find(element => {
     return element.topicName === 'front-end automation';
-    }
-);
+    } );
 console.log(c1);                  // prints { topicNo: 1, topicName: 'front-end automation' } as we have used correct approach by using find method here
 
 console.log('<----------->\n'); 
