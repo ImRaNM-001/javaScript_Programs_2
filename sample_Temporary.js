@@ -19,7 +19,13 @@ const a1 = [1,2,3];
 const b1 = a1;
 console.log(b1);
 
+let obj = {
+    name: 'sharda',
+    age: 90
+}
 
+const rB = Object.create(null);
+console.log(rB);                        // prints [Object: null prototype] {}
 
 
 

@@ -29,7 +29,7 @@ console.log(num);                       // prints [ 1, 2, 3, 'a', 'b', 4, 5, 6]
 console.log('<----------->\n');
 
 // print all values of num array
-for (const index in num) console.log(num[index]);           // prints 1 2 3 a b 4 5 6
+for (const index in num) console.log(num[index] );           // prints 1 2 3 a b 4 5 6
 
 console.log('<----------->\n');
 
@@ -78,7 +78,7 @@ console.log(courses.includes({topicNo: 1, topicName: 'front-end automation'})   
 
 console.log('<----------->\n'); 
 
-// using finc method and storing in a variable c1 (ES5/old way):
+// using find fn and storing in a variable c1 (ES5/old way):
 const c1 = courses.find(element => {
     return element.topicName === 'front-end automation';
     } );
