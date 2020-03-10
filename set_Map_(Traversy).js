@@ -41,7 +41,7 @@ console.log(myMap);         // prints Map { 'c1' => 'hey ya', 3 => 'aasambhav nh
 console.log(myMap.size);    // prints 2 (instead of 3 since 1 item is deleted)
  */
 // 3. -------------WeakSet------------------
-let carWeakSet = new WeakSet();
+/* let carWeakSet = new WeakSet();
 console.log(carWeakSet);            // prints WeakSet { <items unknown> }
 
 // declaring 2 car objects
@@ -57,13 +57,13 @@ const car2 = {
     model: 'Camry',
     year: 2011
 }
-// carWeakSet.add(car2);
-console.log(carWeakSet.size);
+carWeakSet.add(car2);
+console.log(carWeakSet.size); */
 
 
 
 // 4. ----------------WeakMap------------------
-const carWeakMap = new WeakMap();
+/* const carWeakMap = new WeakMap();
 
 const key1 = {
     id: 1
@@ -90,6 +90,43 @@ carWeakMap.set(key2, car4);
 
 // carWeakMap.delete(key1);
 console.log(carWeakMap);                    // prints WeakMap { <items unknown> }
+ */
+
+// --------my own programs start from below for better undertstanding--------------
+
+const myMap = new Map([ ['9', '8'], ['hk', 'see ya'] ] );        // array elements should be bordered with another array (dual array reqd when new Map fn() is invoked)
+console.log(myMap.get('hk') );              // prints see ya
+myMap.clear();
+console.log(myMap.size);                    // prints 0
+console.log(myMap);                         // prints Map {}
+
+myMap.set('a1', 'haa tum');
+console.log(myMap);                        // prints Map { 'a1' => 'haa tum' }
+
+const t2Map = new Map([ ['p', 89] ] );              // for single array element, border array should be there is map
+console.log(t2Map);                                 // prints Map { 'p' => 89 }
+
+// iterating over maps
+    // way1
+    for(const [key, value] of myMap) console.log(`${key} = ${value}`);           // prints Map { 'a1' => 'haa tum' }
+
+    // way2
+    t2Map.forEach( (value, key) => {               // always value, key otherwise key won't be printed first
+    console.log(key, value);                    // prints p 89
+    } );
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
