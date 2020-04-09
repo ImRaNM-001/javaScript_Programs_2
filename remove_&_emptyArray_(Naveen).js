@@ -11,7 +11,7 @@ console.log('The first element deleted from array is: ' + first);           // p
 console.log(num);                   // prints [ 4, 8, 9, 11 ]
 
 // remove from middle
-num.splice(1, 2);            
+num.splice(1, 2);            // here we are telling the compiler from 1st index, remove 2 elements
 console.log(num);           // prints [4, 11]
 
 // how to empty array in 4 ways:

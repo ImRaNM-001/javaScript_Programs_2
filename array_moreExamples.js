@@ -1,18 +1,18 @@
 // ex 1: converting array to set and printing individual values
 const a1 = [4, 5, 6];
-const set1 = new Set(a1);
+console.log(a1[0]);                     // prints 4 which is coming from array
 
-console.log(a1[0]);                     // prints 4
-console.log(set1[0]);                  // prints undefined....hence print 1st value via next line
+const set1 = new Set(a1);
+console.log(set1[0]);                  // prints undefined which is coming from set....hence print 1st value via next line
 
 console.log(set1.values().next().value );       // prints 1st value i.e, 4
 
 
 // ex 2: converting set to array and printing individual values
 const set2 = new Set([8,9]);
-const b2 = Array.from(set2);
-
 console.log(set2);                          // print {8,9}
+
+const b2 = Array.from(set2);
 console.log(b2);                            // print [8,9]
 
 
@@ -23,7 +23,7 @@ console.log(c3);                        // print ['1', '2', '3']
 
 // ex 4: setting custom array length and printing it
 const arr1 = new Array(10);             // setting arr1 length as 10 (means it will take total of 10 elements)
-console.log(arr1[0]);                   // prints undefined as i defined the length
+console.log(arr1[0]);                   // prints undefined as i defined the length only, no elements inserted yet
 console.log(arr1.length);               // prints 10
 
 const brr1 = [20];                      // inserted 1 element into brr1 array and not the length
@@ -40,8 +40,8 @@ let d4 = new Array();
 d4.push(3, 'dilabr' );
 console.log(d4);                                     // prints [ 3, 'dilabr' ]
 
-d4.push(new Array (44, 'saajn' ) );
-console.log(d4);                                    // prints [ 3, 'dilabr', [ 44, 'saajn' ] ]
+// d4.push(new Array (44, 'saajn' ) );             // Or, d4.push([44, 'saajn]);
+console.log(d4);                                    // prints [ 3, 'dilabr', [44, 'saajn'] ]
 
 
 // ex 6: dumping (assigning) 1 array into another directly
@@ -65,9 +65,19 @@ for(index = 0;  index < len;    index++){
 } 
 console.log(tdArr);                 // prints [ 4, 18, 12, 22 ]
  
+// 9. trying few array.includes fn example
+console.log([1, 2, 3].includes(3,2) );                      // prints true
+
+console.log([19, 21, 46].includes(19, -1) );                // prints false
+
+console.log([9, NaN].includes(NaN));                        // prints true
 
 
-
+// 10. forEach example to push elements to an empty array
+const itm = [1, 29, 47];
+const copy_1 = [];
+itm.forEach(elem => copy_1.push(elem + 1) )
+console.log(copy_1);                          // prints [2, 30, 48];
 
 
 

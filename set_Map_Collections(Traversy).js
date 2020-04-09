@@ -1,5 +1,5 @@
 // 1. ----------Set------------------
-/* const myArray = [5, 'maru', true, 11, null];
+const myArray = [5, 'maru', true, 11, null];
 const mySet = new Set(myArray);
 
 mySet.add('34');
@@ -21,13 +21,11 @@ for(const value of mySet) console.log(value);
 
 // Or, via forEach loop
 console.log('Printing via 2nd way: ');
-mySet.forEach(value => {
-    console.log(value);
-} ); */
+mySet.forEach(value => console.log(value) ); 
 
 
 // 2. -------------Map------------------
-/* const myBrray = [ ['c1', 'hey ya'], ['d1', 'yes coming'] ];            
+const myBrray = [ ['c1', 'hey ya'], ['d1', 'yes coming'] ];            
 const myMap = new Map(myBrray);
 console.log(myMap);         // prints Map { 'c1' => 'hey ya', 'd1' => 'yes coming' }
 
@@ -39,7 +37,7 @@ console.log(myMap);   // prints Map {'c1' => 'hey ya','d1' => 'yes coming', 3 =>
 myMap.delete('d1');
 console.log(myMap);         // prints Map { 'c1' => 'hey ya', 3 => 'aasambhav nhi hain' }
 console.log(myMap.size);    // prints 2 (instead of 3 since 1 item is deleted)
- */
+ 
 // 3. -------------WeakSet------------------
 /* let carWeakSet = new WeakSet();
 console.log(carWeakSet);            // prints WeakSet { <items unknown> }
@@ -58,12 +56,10 @@ const car2 = {
     year: 2011
 }
 carWeakSet.add(car2);
-console.log(carWeakSet.size); */
-
-
+console.log(carWeakSet.size); 
 
 // 4. ----------------WeakMap------------------
-/* const carWeakMap = new WeakMap();
+const carWeakMap = new WeakMap();
 
 const key1 = {
     id: 1
@@ -94,26 +90,25 @@ console.log(carWeakMap);                    // prints WeakMap { <items unknown> 
 
 // --------my own programs start from below for better undertstanding--------------
 
-const myMap = new Map([ ['9', '8'], ['hk', 'see ya'] ] );        // array elements should be bordered with another array (dual array reqd when new Map fn() is invoked)
-console.log(myMap.get('hk') );              // prints see ya
-myMap.clear();
-console.log(myMap.size);                    // prints 0
-console.log(myMap);                         // prints Map {}
+const myMap1 = new Map([ ['9', '8'], ['hk', 'see ya'] ] );        // array elements should be bordered with another array (dual array reqd when new Map fn() is invoked)
+console.log(myMap1.get('hk') );              // prints see ya
+myMap1.clear();                              // wipes out entire map
+console.log(myMap1.size);                    // prints 0
+console.log(myMap1);                         // prints Map {}
 
-myMap.set('a1', 'haa tum');
-console.log(myMap);                        // prints Map { 'a1' => 'haa tum' }
+myMap1.set('a1', 'haa tum');
+console.log(myMap1);                        // prints Map { 'a1' => 'haa tum' }
 
 const t2Map = new Map([ ['p', 89] ] );              // for single array element, border array should be there is map
 console.log(t2Map);                                 // prints Map { 'p' => 89 }
 
 // iterating over maps
     // way1
-    for(const [key, value] of myMap) console.log(`${key} = ${value}`);           // prints Map { 'a1' => 'haa tum' }
+    for(const [key, value] of myMap1) console.log(`${key} = ${value}`);           // prints Map { 'a1' => 'haa tum' }
 
     // way2
-    t2Map.forEach( (value, key) => {               // always value, key otherwise key won't be printed first
-    console.log(key, value);                    // prints p 89
-    } );
+    t2Map.forEach( (value, key) => console.log(key, value) );                // always value, key otherwise key won't be printed first, prints p 89
+    
 
 
 

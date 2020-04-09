@@ -13,10 +13,10 @@ for(const elem of items) priceList1.push(elem.price);
 
 console.log(priceList1);                            // prints [ 25, 17, 20, 38 ]
 
-// way 2: using in built map fn of array (new & easy concept)
+// way 2: using in built array.map() which is mainly use to form new array with entire new elements from the original array (new & easy concept)
 const priceList2 = items.map(elem => elem.price);
 console.log(priceList2);                // prints [ 25, 17, 20, 38 ]
-
+ 
 
 // use reduce() fn of array to print Total price of many objects inside an array
 // way 1: using for of loop (old way)

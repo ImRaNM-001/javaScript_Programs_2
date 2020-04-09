@@ -40,7 +40,7 @@ circle.draw() ;				// prints Draw
 
 // commented above block as it is ES5 and below is ES6
 const createCircle = (radius => {
-	return{
+	return {
 		radius,
 		draw(){
 			console.log('Draw a Circle ' + radius);
