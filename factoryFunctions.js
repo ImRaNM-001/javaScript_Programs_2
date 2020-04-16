@@ -67,10 +67,7 @@ factoryFunction follows camelCase, can start with small letters where Constructo
 
 function CreateCircle2(radius){
 	this.radius = radius;
-
-	this.draw = () => {
-		console.log('Draw', radius);
-	}
+	this.draw = () => console.log('Draw', radius);
 }
 
 const circle3 = new CreateCircle2(90);

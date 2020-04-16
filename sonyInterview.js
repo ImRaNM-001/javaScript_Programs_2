@@ -1,3 +1,31 @@
+// Round2 (09-Apr-2020)::
+// Qs 1. write code for array.map() fn
+const orders123 = [
+	{id:1, number: 20},
+	{id:1, number: 30},
+	{id:3, number: 40}
+];
+
+const od_1 = orders123.map(elem => elem.number*2);
+console.log(od_1);                                          // prints [40, 60, 80] (i transformed elements of original array into entirely new array based on condition
+  
+// Qs 2. write code to explain for-each loop
+const a1 = [2, 3, 'hi'];
+a1.forEach(element => console.log(element) );	// prints 2, 3, hi
+
+
+// Qs 3. write code for array.reduce() fn
+const od_2 = orders123.map(elem => elem.number)
+		            .reduce( (a, b) => a + b);
+console.log(od_2);                                  // prints 90
+
+
+// Qs 4. write code for array.filter() fn
+const od_3 = orders123.filter(elem => elem.id ===3);	
+console.log(od_3);                                  // prints [{id: 3, number: 40 }]
+
+
+// Round1 (06-Apr-2020)::
 // Qs 1. for and for-each difference explained with example
 const ar_y = [2,3];
 
@@ -11,7 +39,7 @@ ar_y.forEach(elem => {
 const ar_1 = ['a', 1, 3, 7, 6];
 
 // way 1: most easy way
-if(ar_1.includes(71) ) console.log('Hi I am xyz');          
+if(ar_1.includes(7) ) console.log('Hi I am xyz');          
 else console.log('please enter correct data');              // please enter correct data
 
 // way 2: using array and index (old way)
@@ -38,12 +66,17 @@ console.log(fn1( 5+7+'90') );               // prints string
 
 // Qs 5. remove vowels from a given string
 // option1: most easy way using regular expression
+const s1 = 'Hi !!!!!! My Name Is cxxxx';
+console.log(s1.trim()
+            .replace(/[aeiou]/gi, '')
+);
+
+// option2: using a fat arrow function
 const fny = (givenString => givenString.trim().replace(/[aeiou]/gi, '') );   // the regex i.e, /[aeiou]/gi, is simply replaced by empty string '' with no spaces....Note: The gi modifier is used to do a case insensitive search of all occurrences of a regular expression in a string.
 
 console.log(fny (' Hi !!!!!! My Name Is cxxxx') );              // prints   H !!!!!! My Nm s cxxxx
 
-
-// option2: converting to array and then doing it (bit tricky)
+// option3: converting to array and then doing it (bit tricky)
 const givenString = ' Hi !!!!!! My Name Is cxxxx';
 // const arrString = givenString.trim().split(' ');          // this will trim given string and split each word separated by comma into 1 array element, hence basically a1 is now      ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
 
@@ -85,7 +118,7 @@ drr = crr.map(elem => elem * elem);
 console.log(drr);               // prints [1, 4, 9, 16, 25, 36, 49]
 
 const num = [1, 2, 4, 8];
-const sum = num.reduce( (a, b) => a + b);       // array.reduce() is used to reduce all elements from original array into single one like producing sum of elements
+const sum = num.reduce( (a, b) => a + b);       // array.reduce() is used to reduce all elements from original array into single element like producing sum of elements
 console.log(sum);                               // prints 15
 
  drr = crr.filter(elem => elem % 2 === 0)
@@ -116,29 +149,6 @@ for(index1 = 0; index1 < 3; index1++){
         console.log(letter);        
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -79,7 +79,14 @@ const copy_1 = [];
 itm.forEach(elem => copy_1.push(elem + 1) )
 console.log(copy_1);                          // prints [2, 30, 48];
 
+// Or, using for-of loop
+const copy_2 = [];
+for(const elem of itm) copy_2.push(elem + 2);         // prints [3, 31, 49]
+console.log(copy_2);
 
+// Or, using .map fn to transfom original array itm into entirely new array based on condition
+const cp_map = itm.map(elem => elem +2);
+console.log(cp_map);                            // prints [3, 31, 49]
 
 
 

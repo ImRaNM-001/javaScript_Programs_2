@@ -10,7 +10,6 @@ const items = [
 // way 1: using for of loop and array (old concept)
 const priceList1 = [];
 for(const elem of items) priceList1.push(elem.price);
-
 console.log(priceList1);                            // prints [ 25, 17, 20, 38 ]
 
 // way 2: using in built array.map() which is mainly use to form new array with entire new elements from the original array (new & easy concept)

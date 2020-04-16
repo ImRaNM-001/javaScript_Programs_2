@@ -11,10 +11,11 @@ console.log(1/0);                   	  // prints Infinity
 console.log(-1/0);        	              // prints -Infinity
 
 console.log('a particular string'/0);       // prints NaN
-console.log(0xEF);                      // prints 239
+console.log(0xEF);                          // prints 239
 
 const num = 16;
-console.log(num.toString() );           // prints 16
+console.log(num.toString() );                   // prints 16 
+console.log(typeof(num.toString()) );           // prints string 
 
 const decNum = 24.567;
 console.log(decNum.toFixed(0) );        	  // prints 25
