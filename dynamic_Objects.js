@@ -1,5 +1,5 @@
 // add and delete properties in object
-const circle ={
+const circle = {
 	radius: 10,
 	color: 'red',
 	log(){
