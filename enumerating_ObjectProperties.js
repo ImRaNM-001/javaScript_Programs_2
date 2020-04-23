@@ -1,6 +1,6 @@
 const circle = {
     radius: 1,
-    draw() {
+    draw(){
         console.log('Draw');
     }
 }
@@ -11,7 +11,7 @@ for (let key in circle) console.log(key, circle[key]);       // prints radius 1 
 console.log('\n<------line gap------>\n');
 
 // 2- using for-of loop
-for (let key of Object.keys(circle)) console.log(key);         // prints radius draw (just the key of object)
+for (let key of Object.keys(circle) ) console.log(key);         // prints radius draw (just the key of object)
 
 console.log('\n<------line gap------>\n');
 

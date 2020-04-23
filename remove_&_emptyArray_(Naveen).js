@@ -30,7 +30,7 @@ num_1.splice(0);
 console.log(num_1);            // prints []
 
 // 4- using pop method inside while loop (not recommended as performance is imapacted using this apparoach.....i noticed slowness in printing last console statement as the larger the array the longer the time)
-while(num_1.length>0) num_1.pop();
+while(num_1.length > 0) num_1.pop();
 console.log(num_1);            // prints []
 
 

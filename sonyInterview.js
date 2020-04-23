@@ -138,20 +138,17 @@ const ord_1_sum = orders.filter(od => od.userId === 1)
                     .map(od => od.amount)
                     .reduce( (a, b) => a + b);
 console.log(ord_1_sum);                                         // prints 25 (which is nothing 10 + 15)
+console.log('\n======================');
 
 
 // asked by Sagar on interview for Shell Belandur automation role
-let letter = 'x', index1, index2;
-console.log(letter);
-for(index1 = 0; index1 < 3; index1++){
-	for(index2 = 0; index2 < index1;    index2++){        
+let letter = 'x';
+console.log(letter,'\n');
+for(let row = 0; row < 3; row++){           // < 3 means it will print 3 lines of x starting from 0, 1, 2 that's it
+	for(let col = 0; col < row;    col++){        
         letter+='x';
         console.log(letter);        
     }
 }
-
-
-
-
 
 

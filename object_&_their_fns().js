@@ -1,8 +1,10 @@
 'use strict';
+
 // ex 1: creating a basic object with a key fn()
 const batman1 = {
     firstName: 'bruce',
     lastNname: 'wayne',
+
     secretIdentity(){
         return this.firstName + this.lastNname;
     }

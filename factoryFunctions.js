@@ -7,6 +7,7 @@ const circle = {
 		a: 1,
 		b: 2
 	},
+
 	// draw: () => {
 	draw(){
 		console.log('Draw');
@@ -16,18 +17,19 @@ const circle = {
 console.log(circle);		// prints {  radius: 1,  isVisible: true,  location: { a: 1, b: 2 },  draw: [Function: draw] }
 circle.draw() ;				// prints Draw
 
-// part 2: writing inside a function (long code)
-/*function createCircle(radius){
-	const circle1 = {
-		radius: radius,
-		draw(){
-			console.log('Draw Circle ' + radius);
+// part 2: writing inside a function (long code and ES5)
+/*	function createCircle(radius){
+		const circle1 = {
+			radius: radius,
+			draw(){
+				console.log('Draw Circle ' + radius);
+			}
 		}
-	}
-	return circle1;
-}*/
+		return circle1;
+}									*/
 
-// part 3: simplying the code and minimizing the code (intent to create multiple circle objects) (short code)
+
+// part 3: simplying the code and minimizing the code (intent to create multiple circle objects) (short code but ES5)
 
 // function createCircle(radius){					// below is a factory function whose job is to create some objects like circle1 & circle2
 // 	return{										// returning an entire object
