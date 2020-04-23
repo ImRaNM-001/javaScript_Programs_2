@@ -1,7 +1,7 @@
 // ex 1: converting array to set and printing individual values
 const a1 = [4, 5, 6];
 console.log(a1[0]);                     // prints 4 which is coming from array
-            
+
 const set1 = new Set(a1);
 console.log(set1[0]);                  // prints undefined which is coming from set....hence print 1st value via next line
 
