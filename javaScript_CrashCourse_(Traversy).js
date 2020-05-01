@@ -176,11 +176,12 @@ class Person1{
         return `${this.fName} ${this.lName}`;
     }
 }
-    const per3 = new Person1('Billy', 'Jacob', '5-7-1979');
-    const per4 = new Person1('Mary', 'Jacob', '12-4-1991');  
+    
+const per3 = new Person1('Billy', 'Jacob', '5-7-1979');
+const per4 = new Person1('Mary', 'Jacob', '12-4-1991');  
 
-    console.log(per3.getBirthYear() );                  // prits 1979
-    console.log(per4.getFullName() );                   // prints Mary Jacob
+console.log(per3.getBirthYear() );                  // prits 1979
+console.log(per4.getFullName() );                   // prints Mary Jacob
 
 
 

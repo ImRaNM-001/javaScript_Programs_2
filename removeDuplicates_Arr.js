@@ -1,7 +1,7 @@
 const a1 = new Array(8, 9, 8, 5, 20, 5, 'Hijack');
 
-// a1.forEach(elem => console.log(elem) );     // prints each element but in vertical lines
-console.log('Printing values of a1 array: ', a1);           // prints [8, 9, 8, 5, 20, 5, 'Hijack']
+// a1.forEach(elem => console.log(elem) );       // prints each element but in vertical lines
+console.log('Printing entire a1 array: ', a1);           // prints [8, 9, 8, 5, 20, 5, 'Hijack']
 
 // Removing duplicates via:
 // 1. spread operator and set (MOST EASY way)
