@@ -11,7 +11,7 @@ console.log(od_1);                                          // prints [40, 60, 8
   
 // Qs 2. write code to explain for-each loop
 const a1 = [2, 3, 'hi'];
-a1.forEach(element => console.log(element) );	// prints 2, 3, hi
+a1.forEach(element => console.log(element) );           	// prints 2, 3, hi
 
 
 // Qs 3. write code for array.reduce() fn
@@ -78,13 +78,18 @@ console.log(fny (' Hi !!!!!! My Name Is cxxxx') );              // prints   H !!
 
 // option3: converting to array and then doing it (bit tricky)
 const givenString = ' Hi !!!!!! My Name Is cxxxx';
-// const arrString = givenString.trim().split(' ');          // this will trim given string and split each word separated by comma into 1 array element, hence basically a1 is now      ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
 
-// const arrString = Array.from(givenString);        // this will split each letter of a string into 1 array element (same as using quotes without space i.e, '' or "")
 
-// console.log(givenString[0]);             // prints Hi
+/* more ways of using .split() fn
+// way 1
+const arrString = givenString.trim().split(' ');          // this will trim given string and start the splitting where white space is identified first into 1 array element, hence basically a1 is now     ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
 
-// const arrString = givenString.trim().split();       // if signature of split() fn is empty it will convert store entire string into 1 element only hence arrString[0] will be    Hi !!!!!! My Name Is cxxxx
+// way 2
+const arrString = Array.from(givenString);          // this will start the splitting immediatedly (i.e, spilt each letter) into 1 array element as nothing is given inside quotes
+
+console.log(givenString[0]);             // prints Hi
+
+const arrString = givenString.trim().split();       // if signature of split() fn is empty it will convert entire string into 1 array element, hence arrString[0] will be    Hi !!!!!! My Name Is cxxxx                  */
 
 // again writing for elegant finishup
 const vowels = ['a', 'e', 'i', 'o', 'u'];

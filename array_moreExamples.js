@@ -49,12 +49,12 @@ const e1 = [1,2,3];
 const f1 = e1;
 console.log(f1);                // prints [1,2,3] 
 
-// // ex 7: setting invalid array length
-// const arrName = new Array(4294967296);      //2 ^ 32nd power = 4294967296 
-// const brrName = new Array(-100);              // negative sign
+/*   // ex 7: setting invalid array length
+const arrName = new Array(4294967296);      //2 ^ 32nd power = 4294967296 
+const brrName = new Array(-100);              // negative sign
 
-// console.log(arrName);                   // prints RangeError: Invalid array length
-// console.log(brrName);                   // prints RangeError: Invalid array length
+console.log(arrName);                   // prints RangeError: Invalid array length
+console.log(brrName);                   // prints RangeError: Invalid array length               */
 
 
 // ex 8: multiplying each elements of array
@@ -75,7 +75,7 @@ console.log([9, NaN].includes(NaN));                        // prints true
 
 // 10. forEach example to push elements to an empty array
 const itm = [1, 29, 47];
-const copy_1 = [];
+const copy_1 = [];              
 itm.forEach(elem => copy_1.push(elem + 1) )
 console.log(copy_1);                          // prints [2, 30, 48];
 
