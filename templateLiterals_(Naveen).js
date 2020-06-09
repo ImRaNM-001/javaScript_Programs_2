@@ -11,7 +11,7 @@ console.log(msg1); */
 object --> {} 
 boolean --> true, false
 string --> '', " "
-template literals (introduced in ES6) --> ` ` (back ticks) */
+template literals (introduced in ES6) --> ` ` (back ticks)              */
 
 // writing template literals below, Ex: 1
 const emailBody = `Hi Walter,

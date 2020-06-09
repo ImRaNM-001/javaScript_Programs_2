@@ -9,8 +9,7 @@ const another = {};
 console.log(another);           // prints {}
 
 // 1- cloning/storing circle object into another object using for-in loop (old way of cloning)
-for (let key in circle)
-another[key] = circle[key];
+for (let key in circle) another[key] = circle[key];
 
 //console.log(key, another[key]);           // this line wil give error as key variable is the key pointing to circle object and not another object
 
