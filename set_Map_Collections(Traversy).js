@@ -33,6 +33,7 @@ console.log('Printing via 2nd way: ');
 mySet.forEach(value => console.log(value) ); 
 console.log('\n=========================');
 
+
 // 2. -------------Map------------------
 const myBrray = [ ['c1', 'hey ya'], ['d1', 'yes coming'] ];            
 const myMap = new Map(myBrray);                               // always we pass an 2D array inside Map signature
@@ -129,7 +130,7 @@ console.log(myMap1);                                        // prints Map { 'a1'
 console.log('\n=========================');
 
 
-const t2Map = new Map( [ ['p', 89] ] );                     // for single array element, 2D array should be there inside Map signature
+const t2Map = new Map([ ['p', 89] ]);                     // for single array element, 2D array should be there inside Map signature
 console.log(t2Map);                                           // prints Map { 'p' => 89 }
 console.log('\n=========================');
 

@@ -6,8 +6,7 @@ const items = [
     {name: 'drinks', price: 38}
 ];
 
-// requirement is to pick the price of each item from items array
-// way 1: using for of loop and array (old concept)
+// requirement is to pick the price of each item from items array.........way1: using for of loop and array (old concept)
 const priceList1 = [];
 for(const elem of items) priceList1.push(elem.price);
 console.log(priceList1);                            // prints [ 25, 17, 20, 38 ]
