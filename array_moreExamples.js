@@ -17,7 +17,7 @@ console.log(b2);                            // print [8,9]
 
 
 // ex 3: creating array from a simple string consisting of numbers
-const c3 = Array.from('123');
+const c3 = Array.from('123');           // it splits string on the basis of "no space" like str.split('')
 console.log(c3);                        // print ['1', '2', '3']
 
 

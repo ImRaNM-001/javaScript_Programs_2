@@ -6,7 +6,7 @@ const orders123 = [
 	{id:3, number: 40}
 ];
 
-const od_1 = orders123.map(elem => elem.number*2);
+const od_1 = orders123.map(elem => elem.number * 2);
 console.log(od_1);                                          // prints [40, 60, 80] (i transformed elements of original array into entirely new array based on condition
   
 // Qs 2. write code to explain for-each loop
@@ -21,7 +21,7 @@ console.log(od_2);                                  // prints 90
 
 
 // Qs 4. write code for array.filter() fn
-const od_3 = orders123.filter(elem => elem.id ===3);	
+const od_3 = orders123.filter(elem => elem.id === 3);	
 console.log(od_3);                                  // prints [{id: 3, number: 40 }]
 
 
@@ -30,7 +30,7 @@ console.log(od_3);                                  // prints [{id: 3, number: 4
 const ar_y = [2,3];
 
 for(let index = 1; index < ar_y.length; index++) console.log(ar_y[index]);      // prints 3
-ar_y.forEach(elem => {
+ar_y.forEach(elem =>{
     if(elem > 2) console.log(elem);              // prints only  3
 } );
     
@@ -74,7 +74,7 @@ console.log(s1.trim()
 // option2: using a fat arrow function
 const fny = (givenString => givenString.trim().replace(/[aeiou]/gi, '') );   // the regex i.e, /[aeiou]/gi, is simply replaced by empty string '' with no spaces....Note: The gi modifier is used to do a case insensitive search of all occurrences of a regular expression in a string.
 
-console.log(fny (' Hi !!!!!! My Name Is cxxxx') );              // prints   H !!!!!! My Nm s cxxxx
+console.log(fny(' Hi !!!!!! My Name Is cxxxx') );              // prints   H !!!!!! My Nm s cxxxx
 
 // option3: converting to array and then doing it (bit tricky)
 const givenString = ' Hi !!!!!! My Name Is cxxxx';
@@ -82,10 +82,10 @@ const givenString = ' Hi !!!!!! My Name Is cxxxx';
 
 /* more ways of using .split() fn
 // way 1
-const arrString = givenString.trim().split(' ');          // this will trim given string and start the splitting where white space is identified first into 1 array element, hence basically a1 is now     ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
+const arrString = givenString.trim().split(' ');          // this will trim the string from white space is identified, hence basically a1 is now     ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
 
 // way 2
-const arrString = Array.from(givenString);          // this will start the splitting immediatedly (i.e, spilt each letter) into 1 array element as nothing is given inside quotes
+const arrString = Array.from(givenString);          // this will start splitting without any spaces (i.e, spilt each letter into 1 array element
 
 console.log(givenString[0]);             // prints Hi
 
@@ -95,9 +95,9 @@ const arrString = givenString.trim().split();       // if signature of split() f
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 const arrString = givenString
             .trim()                                 // kills spaces before and after string
-            .split('')                              // stirng becomes array as      ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
+            .split('')                              // string becomes an array as      ['Hi', '!!!!!!', 'My', 'Name', 'Is', 'cxxxx']
             .filter(elem => !vowels.includes(elem.toLowerCase() ) )         // array updates as ['H', '!!!!!!', 'My', 'Nm', 's', 'cxxxx']
-            .join('');                                              // array gets converted back to string as    H !!!!!! My Nm s cxxxx
+            .join('');                                              // array is converted back to a string as    H !!!!!! My Nm s cxxxx
 
 console.log(arrString);                     // prints  H !!!!!! My Nm s cxxxx
 
@@ -126,9 +126,9 @@ const num = [1, 2, 4, 8];
 const sum = num.reduce( (a, b) => a + b);       // array.reduce() is used to reduce all elements from original array into single element like producing sum of elements
 console.log(sum);                               // prints 15
 
- drr = crr.filter(elem => elem % 2 === 0)
-        .map(elem => elem * elem)
-        .reduce( (a, b) => a + b);
+drr = crr.filter(elem => elem % 2 === 0)        // here output is [2, 4, 6]
+        .map(elem => elem * elem)               // here output is [4, 16, 36]
+        .reduce( (a, b) => a + b);               // here output is 56
 console.log(drr);                               // prints 56
 
 // what he said in the video 'a real world example' which is below
@@ -139,9 +139,9 @@ const orders = [
     {userId: 2, amount: 100},
 ];
 
-const ord_1_sum = orders.filter(od => od.userId === 1)
-                    .map(od => od.amount)
-                    .reduce( (a, b) => a + b);
+const ord_1_sum = orders.filter(od => od.userId === 1)     // here output is [ {userId: 1, amount: 10}, {userId: 1, amount: 15} ]
+                    .map(od => od.amount)                   // here output is [ 10, 15 ]
+                    .reduce( (a, b) => a + b);              // here output is 25
 console.log(ord_1_sum);                                         // prints 25 (which is nothing 10 + 15)
 console.log('\n======================');
 
@@ -149,9 +149,9 @@ console.log('\n======================');
 // asked by Sagar on interview for Shell Belandur automation role
 let letter = 'x';
 console.log(letter,'\n');
-for(let row = 0; row < 3; row++){           // < 3 means it will print 3 lines of x starting from 0, 1, 2 that's it
+for(let row = 0; row < 3; row++){           // < 3 means it will print 3 vertical lines of x starting from 0, 1, 2 that's it
 	for(let col = 0; col < row;    col++){        
-        letter+='x';
+        letter += 'x';
         console.log(letter);        
     }
 }

@@ -10,7 +10,7 @@ console.log(y);                 // prints 73 as 5 + 2 is 7 and then 7 + '3' is 7
 const add = (par1, par2) =>{
     if (typeof par1 == 'number' && typeof par2 == 'number') return par1 + par2;
     else return +par1 + +par2;
-}
+};
 
 console.log(add('95', '4') );            // prints 99
 console.log(add('false', '4') );        // prints NaN

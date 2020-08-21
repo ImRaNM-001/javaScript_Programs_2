@@ -25,11 +25,11 @@ console.log('\n================');
 
 
 // print all values of num array
-for (const index in num) console.log(num[index] );           // prints 1 2 3 a b 4 5 6
+for(const index in num) console.log(num[index] );           // prints 1 2 3 a b 4 5 6
 console.log('\n================');
 
 //Or, 
-for (const index of num) console.log(index);                // same output as above
+for(const index of num) console.log(index);                // same output as above
 console.log('\n================'); 
 
 //Or,
