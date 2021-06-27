@@ -2,7 +2,7 @@ const max = Number.MAX_SAFE_INTEGER;                // to print the largest poss
 console.log(max);                                   
 
 console.log(max + 1);           // looks wierd as it gives same number 
-console.log(max + 2);            //test  1 23      
+console.log(max + 2);               
 
 const big1 = 1n;            // represents BigInt number
 console.log(big1 + 1n);     // prints 2n
